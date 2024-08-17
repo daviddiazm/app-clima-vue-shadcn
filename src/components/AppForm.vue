@@ -27,7 +27,7 @@ const locationSelect = reactive({
   country: ''
 })
 
-const emits = defineEmits(['get-weather'])
+const emits = defineEmits(['get-weather','open-close-draw' ])
 
 
 const validation = () => {
@@ -37,6 +37,7 @@ const validation = () => {
   }
 
   emits('get-weather',locationSelect)
+  emits('open-close-draw')
 }
 
 const alertUse = (msg) => {
